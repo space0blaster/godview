@@ -119,7 +119,7 @@ const server=http.createServer((req, serverResponse)=>{
     let b ='';
     let responsePayload={};
     let reqPath=req.url.split('/');
-    if(req.url==='/' || reqPath[1]==='search' || reqPath[1]==='discover') {
+    if(req.url==='/' || ['search'].indexOf(reqPath[1])>-1) {
         fs.readFile('public/index.html',(err, data)=> {
             serverResponse.writeHead(200,{'Content-Type':'text/html'});
             serverResponse.write(data);

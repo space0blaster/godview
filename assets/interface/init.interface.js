@@ -583,21 +583,6 @@ class I {
             box.style.right='-500px';
         },4000);
     };
-    static badInput(field) {
-        let defaultStyle=field.style.border;
-        field.style.border='1px solid red';
-        setTimeout(()=>{
-            field.style.border=defaultStyle;
-        },2000);
-    };
-    static submit(button) {
-        button.style.display='none';
-        E.img(button.parentNode,'','submitLoading',rootURL+'/.src/loading.gif');
-    };
-    static unsubmit(button) {
-        if(E.get('submitLoading')) E.get('submitLoading').parentNode.removeChild(E.get('submitLoading'));
-        button.style.display='block';
-    };
     //
     static menu() {
         if(!E.get('menu')) {
