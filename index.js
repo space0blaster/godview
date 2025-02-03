@@ -119,7 +119,7 @@ const server=http.createServer((req, serverResponse)=>{
     let b ='';
     let responsePayload={};
     let reqPath=req.url.split('/');
-    if(req.url==='/' || ['search'].indexOf(reqPath[1])>-1) {
+    if(req.url==='/' || ['search','discover'].indexOf(reqPath[1])>-1) {
         fs.readFile('public/index.html',(err, data)=> {
             serverResponse.writeHead(200,{'Content-Type':'text/html'});
             serverResponse.write(data);
@@ -128,29 +128,53 @@ const server=http.createServer((req, serverResponse)=>{
     }
     else if(req.url.split(".")[2]==="js") {
         fs.readFile('public/src/'+req.url,(err, data)=> {
-            serverResponse.writeHead(200,{'Content-Type':'text/javascript'});
-            serverResponse.write(data);
+            if(err) {
+                serverResponse.writeHead(200,{'Content-Type':'application/json'});
+                serverResponse.write(JSON.stringify({error:'error retrieving script'}));
+            }
+            else {
+                serverResponse.writeHead(200,{'Content-Type':'text/javascript'});
+                serverResponse.write(data);
+            }
             return serverResponse.end();
         });
     }
     else if(req.url.split(".")[2]==="css") {
         fs.readFile('public/src/'+req.url,(err, data)=> {
-            serverResponse.writeHead(200,{'Content-Type':'text/css'});
-            serverResponse.write(data);
+            if(err) {
+                serverResponse.writeHead(200,{'Content-Type':'application/json'});
+                serverResponse.write(JSON.stringify({error:'error retrieving stylesheet'}));
+            }
+            else {
+                serverResponse.writeHead(200,{'Content-Type':'text/css'});
+                serverResponse.write(data);
+            }
             return serverResponse.end();
         });
     }
     else if(req.url.split(".")[1]==="png") {
         fs.readFile('public/src/'+req.url,(err, data)=> {
-            serverResponse.writeHead(200,{'Content-Type':'image/png'});
-            serverResponse.write(data);
+            if(err) {
+                serverResponse.writeHead(200,{'Content-Type':'application/json'});
+                serverResponse.write(JSON.stringify({error:'error retrieving image'}));
+            }
+            else {
+                serverResponse.writeHead(200,{'Content-Type':'image/png'});
+                serverResponse.write(data);
+            }
             return serverResponse.end();
         });
     }
     else if(req.url.split(".")[1]==="gif") {
         fs.readFile('public/src/'+req.url,(err, data)=> {
-            serverResponse.writeHead(200,{'Content-Type':'image/gif'});
-            serverResponse.write(data);
+            if(err) {
+                serverResponse.writeHead(200,{'Content-Type':'application/json'});
+                serverResponse.write(JSON.stringify({error:'error retrieving image'}));
+            }
+            else {
+                serverResponse.writeHead(200,{'Content-Type':'image/gif'});
+                serverResponse.write(data);
+            }
             return serverResponse.end();
         });
     }
