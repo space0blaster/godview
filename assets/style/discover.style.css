@@ -1,0 +1,97 @@
+#discoverBox{
+    z-index:2;
+    position:absolute;
+    top:40px;
+    right:20px;
+    width:400px;
+    bottom:40px;
+    background:rgba(71,71,71,0.8);
+    border-radius:20px;
+}
+#discoverOptBox{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:65px;
+    border-bottom:1px solid #222222;
+}
+#discoverOptButtonBox{
+    display:flex;
+    margin:10px;
+}
+#discoverResultsBox{
+    position:absolute;
+    top:65px;
+    left:0;
+    right:0;
+    bottom:0;
+    overflow-y:auto;
+}
+#discoverResultsBox::-webkit-scrollbar{
+    display:none;
+}
+#discoverLoad{
+    max-height:30px;
+    max-width:30px;
+    padding:10px;
+}
+.discoverItem{
+    padding:20px;
+    color:#EDEDED;
+}
+.discoverItemTitle{
+    font-family:'Teachers',sans-serif;
+    cursor:pointer;
+}
+.discoverItemTitle:hover{
+    text-decoration:underline;
+}
+pre{
+    font-family:'Teachers',sans-serif;
+    font-size:15px;
+    line-height:20px;
+}
+
+.discoverButtonInfo{
+    font-size:14px;
+    font-family:'Teachers',sans-serif;
+    margin:10px;
+}
+.discoverButton{
+    padding:10px;
+    border:0;
+    border-radius:8px;
+    font-family:'Teachers',sans-serif;
+    font-size:14px;
+    margin:10px;
+    cursor:pointer;
+}
+
+
+@media only screen and (max-width: 800px) {
+    #discoverBox{
+        top:unset;
+        right:20px;
+        width:unset;
+        left:20px;
+        bottom:40px;
+        height:250px;
+    }
+}
+@media (prefers-color-scheme: light) {
+    #discoverBox{
+        background:#FFF;
+    }
+    #discoverOptBox{
+        border-bottom:1px solid #EDEDED;
+    }
+    .discoverItem{
+        color:#444444;
+    }
+    .discoverButton{
+        background:#F3F3F3;
+        color:#444444;
+        box-shadow:0 2px 5px #CCCCCC;
+    }
+}

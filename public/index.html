@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Godview</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
+    <!-- -->
+    <link href="http://localhost:3939/style.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c7e1e17f8b.js" crossorigin="anonymous"></script>
+    <!-- -->
+    <meta property="og:site_name" content="Godview">
+    <meta property="og:image" content="src/logo.png">
+    <link rel="apple-touch-icon" href="src/logo.png">
+    <link rel="shortcut icon" href="src/logo.png">
+</head>
+
+<body>
+
+    <script src="http://localhost:3939/interface.min.js"></script>
+    <script>
+        let path=window.location.pathname.split('/');
+        if(!path[1] || path[1]==='search') MapInterface.map();
+        else if(path[1]==='discover') DiscoverInterface.map();
+        else MapInterface.map();
+    </script>
+</body>
+</html>

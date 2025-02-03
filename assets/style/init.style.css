@@ -1,0 +1,151 @@
+body{
+    background:#F3F3F3;
+}
+
+input{
+    -webkit-appearance:none;
+    outline:none;
+}
+select{
+    -webkit-appearance:none;
+}
+button{
+    -webkit-appearance:none;
+}
+textarea{
+    -webkit-appearance:none;
+    outline:none;
+}
+option{
+    -webkit-appearance:none;
+}
+button{
+    -webkit-appearance:none;
+    outline:none;
+}
+
+/* for number inputs */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+a, a:hover, a:visited, a:active{
+    color:#3C8566;
+    text-decoration:none;
+}
+
+.full{
+    width:100%;
+}
+.left{
+    text-align:left;
+}
+.center{
+    text-align:center;
+}
+.right{
+    text-align:right;
+}
+.pointer{
+    cursor:pointer;
+}
+.capitalize{
+    text-transform:capitalize;
+}
+
+.containers{
+    display:none;
+}
+.fileField{
+    visibility:hidden;
+}
+
+pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+#notificationBox{
+    z-index:105;
+    position:fixed;
+    min-width:200px;
+    max-width:350px;
+    top:25px;
+    right:-500px;
+    visibility:hidden;
+    background:#FFFFFF;
+    padding:10px;
+    font-family:'Teachers',sans-serif;
+    font-weight:400;
+    font-size:13px;
+    color:#FFFFFF;
+    border-radius:4px;
+    transition:right ease-out 0.3s;
+    -webkit-transition:right ease-out 0.3s;
+    -moz-transition:right ease-out 0.3s;
+}
+#submitLoading{
+    max-width:25px;
+    max-height:25px;
+}
+
+#menu{
+    z-index:3;
+    position:relative;
+    top:10px;
+    width:150px;
+    margin:0 auto;
+    padding:7px;
+    border-radius:40px;
+    background:#FFFFFF;
+    display:flex;
+    text-align:center;
+}
+.menuItem{
+    font-family:'Teachers',sans-serif;
+    font-size:13px;
+    padding:10px;
+    width:90px;
+    text-align:center;
+    border-radius:30px;
+    cursor:pointer;
+    color:#777777;
+}
+.menuItemActive{
+    background:#DDDDDD;
+    color:#333333;
+}
+
+@media (prefers-color-scheme: dark) {
+    body{
+        background:#222222;
+    }
+    a{
+        color:#B0D8FF;
+    }
+    a:hover{
+        color:#B0D8FF;
+    }
+    a:visited{
+        color:#B0D8FF;
+    }
+    a:active{
+        color:#B0D8FF;
+    }
+
+    #menu{
+        background:#333333;
+    }
+    .menuItemActive{
+        background:#444444;
+        color:#DDDDDD;
+    }
+}

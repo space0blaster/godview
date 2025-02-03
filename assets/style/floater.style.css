@@ -1,0 +1,103 @@
+.floaterMenu{
+    z-index:500;
+    position:absolute;
+    border-radius:7px;
+    padding:5px;
+    min-width:150px;
+    min-height:25px;
+    background:rgba(31,31,31,0.7);
+    border:1px solid #333333;
+    box-shadow:0 5px 10px #111111;
+    backdrop-filter:blur(5px);
+    -webkit-backdrop-filter:blur(5px);
+}
+.floaterMenuTable{
+    border-collapse:collapse;
+}
+.floaterMenuTable td:first-child{
+    padding:5px;
+    border-top-left-radius:8px;
+    border-bottom-left-radius:8px;
+}
+.floaterMenuTable td:last-child{
+    padding:5px;
+    border-top-right-radius:8px;
+    border-bottom-right-radius:8px;
+}
+.floaterMenuTable tr:hover{
+    background:rgba(70,70,70,0.8);
+}
+.floaterMenuItem{
+    font-family:'Teachers',sans-serif;
+    font-weight:400;
+    font-size:15px;
+    cursor:pointer;
+    margin-top:10px;
+    margin-bottom:10px;
+    color:#DDDDDD;
+}
+.floaterMenuItemRed{
+    color:#FF5D5D !important;
+}
+.floaterMenuDivider{
+    height:1px;
+    width:100%;
+    background:#EDEDED;
+}
+
+.floaterMenuButton{
+    background:#EDEDED;
+    padding:10px;
+    cursor:pointer;
+    color:#555555;
+    font-family:'Teachers',sans-serif;
+    font-size:15px;
+    border-radius:8px;
+    border:0;
+}
+.floaterMenuButtonRed{
+    background:#FF5D5D !important;
+    color:#FFFFFF !important;
+}
+.floaterMenuButtonGreen{
+    background:#35C185 !important;
+    color:#FFFFFF !important;
+}
+.floaterInputField{
+    padding:10px;
+    font-family:'Teachers',sans-serif;
+    font-size:14px;
+    border:0;
+    border-radius:8px;
+    background:#555555;
+    color:#FFFFFF;
+}
+.floaterInputButton{
+    padding:10px;
+    cursor:pointer;
+    font-family:'Teachers',sans-serif;
+    font-size:14px;
+    border-radius:8px;
+    border:0;
+    background:#444444;
+    color:#CCCCCC;
+}
+.floaterMenuItemStaticSmall{
+    color:#444444;
+    font-family:'Quicksand',sans-serif;
+    font-weight:300;
+    font-size:11px;
+}
+
+.floaterStaticKey{
+    color:#777777;
+    font-family:'Teachers',sans-serif;
+    font-weight:400;
+    font-size:15px;
+}
+.floaterStaticValue{
+    color:#444444;
+    font-family:'Teachers',sans-serif;
+    font-weight:400;
+    font-size:15px;
+}

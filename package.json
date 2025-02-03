@@ -1,0 +1,23 @@
+{
+  "name": "godview",
+  "version": "1.0.0",
+  "description": "LLM Map",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "llm",
+    "map",
+    "ai"
+  ],
+  "author": "Amanuel Tsegai",
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.36.3",
+    "dotenv": "^16.4.7",
+    "ollama": "^0.5.12",
+    "openai": "^4.82.0"
+  }
+}
