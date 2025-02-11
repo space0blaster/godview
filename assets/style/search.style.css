@@ -1,0 +1,277 @@
+#searchPrompt{
+    z-index:2;
+    position:relative;
+    width:600px;
+    margin:0 auto;
+    background:rgba(71,71,71,0.8);
+    border-radius:20px;
+    padding:10px;
+    display:flex;
+    user-select:none;
+}
+.promptOptionsBox{
+    display:flex;
+    user-select:none;
+}
+.promptOptions{
+    width:fit-content;
+    border-radius:12px;
+    padding:10px;
+    color:#DDDDDD;
+    background:#333333;
+    margin-right:5px;
+    cursor:pointer;
+    user-select:none;
+}
+.promptOptIcon{
+    font-size:14px;
+    user-select:none;
+}
+.promptOptText{
+    font-size:12px;
+    font-family:'Teachers',sans-serif;
+    user-select:none;
+}
+#locate{}
+#model{}
+#selectModel{
+    visibility:hidden;
+    width:0;
+    height:0;
+}
+#promptField{
+    background:transparent;
+    border:0;
+    padding:10px;
+    font-size:17px;
+    color:#EDEDED;
+    font-family:'Teachers',sans-serif;
+    width:100%;
+}
+#promptButton{
+    width:45px;
+    height:45px;
+    border-radius:100%;
+    color:#333333;
+    font-size:20px;
+    padding:10px;
+    background:#EDEDED;
+    border:0;
+    cursor:pointer;
+    float:right;
+}
+#promptLoad{
+    max-width:45px;
+    max-height:45px;
+    display:none;
+    float:right;
+}
+
+#searchHistory{
+    z-index:2;
+    position:absolute;
+    top:100px;
+    left:30px;
+    width:250px;
+    max-height:300px;
+    overflow-y:auto;
+    background:rgba(51,51,51,0.8);
+    border-radius:10px;
+    overflow-y:auto;
+    visibility:hidden;
+    transition:visibility 0.3s linear;
+    -webkit-transition:visibility 0.3s linear;
+    -moz-transition:visibility 0.3s linear;
+}
+#historyTitle{
+    position:relative;
+    width:200px;
+    margin:0 auto;
+    font-size:15px;
+    font-family:'Teachers',sans-serif;
+    font-weight:500;
+    color:#DDDDDD;
+    text-align:center;
+    padding:10px;
+    margin-bottom:5px;
+}
+#historyTable{
+    border-collapse:collapse;
+}
+#historyTable tr{
+    margin-bottom:10px;
+}
+.historyItemDot{
+    font-size:20px;
+    cursor:pointer;
+    padding:5px;
+}
+.historyItemText{
+    font-size:15px;
+    font-family:'Teachers',sans-serif;
+    color:#EDEDED;
+    cursor:pointer;
+    padding:5px;
+}
+.historyItemRm{
+    font-size:20px;
+    color:#DDDDDD;
+    cursor:pointer;
+    display:none;
+}
+#historyTable tr:hover .historyItemRm{
+    display:block;
+}
+
+#searchCards{
+    z-index:2;
+    position:absolute;
+    top:30px;
+    right:20px;
+    width:250px;
+    bottom:50px;
+    overflow-y:auto;
+}
+#searchCards::-webkit-scrollbar{
+    display:none;
+}
+.cardItem{
+    background:rgba(31,31,31,0.8);
+    border-radius:10px;
+    padding:10px;
+    margin-bottom:10px;
+    cursor:pointer;
+    opacity:0;
+    transition:opacity 0.5s linear;
+    -webkit-transition:opacity 0.5s linear;
+    -moz-transition:opacity 0.5s linear;
+}
+.cardText{
+    padding:4px;
+}
+.cardName{
+    font-family:'Teachers',sans-serif;
+    font-size:18px;
+    color:#EDEDED;
+}
+.cardAddress{
+    font-family:'Teachers',sans-serif;
+    font-size:15px;
+    color:#999999;
+}
+.cardLatLong{
+    font-family:'Teachers',sans-serif;
+    font-size:13px;
+    color:#999999;
+}
+.cardIcon{
+    width:fit-content;
+    border-radius:8px;
+    padding:8px;
+    font-family:'Teachers',sans-serif;
+    font-size:12px;
+}
+
+.pointName{
+    font-family:'Teachers',sans-serif;
+    font-size:18px;
+    color:#333333;
+}
+.pointAddress{
+    font-family:'Teachers',sans-serif;
+    font-size:15px;
+    color:#333333;
+}
+.pointLatLong{
+    font-family:'Teachers',sans-serif;
+    font-size:15px;
+    color:#555555;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    #searchPrompt{
+        width:300px;
+    }
+
+    #searchHistory{
+        left:unset;
+        top:90px;
+        right:20px;
+        width:200px;
+        max-height:150px;
+    }
+    #historyTitle{
+        width:180px;
+        font-size:13px;
+    }
+
+    #searchCards{
+        width:unset;
+        top:unset;
+        left:10px;
+        right:10px;
+        bottom:165px;
+        overflow-y:hidden;
+        overflow-x:auto;
+        display:flex;
+        gap:10px;
+    }
+    .cardItem{
+        margin-bottom:unset;
+        height:100px;
+        flex: 0 0 250px;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    #searchHistory{
+        background:rgba(200,200,200,0.8);
+    }
+    #historyTitle{
+        color:#444444;
+    }
+    .historyItemText{
+        color:#555555;
+    }
+    .historyItemRm{
+        color:#777777;
+    }
+
+    #searchPrompt{
+        background:rgba(200,200,200,0.8);
+    }
+    .promptOptions{
+        background:rgba(240,240,240,1);
+        border:1px solid #DDDDDD;
+        color:#444444;
+    }
+    #promptField{
+        color:#222222;
+    }
+    #promptField::placeholder{
+        color:#555555;
+    }
+    #promptButton{
+        background:#555555;
+        color:#FFFFFF;
+    }
+
+    .cardItem{
+        /*background:rgba(200,200,200,0.8);*/
+        background:#FFFFFF;
+    }
+    .cardName{
+        color:#222222;
+    }
+    .cardAddress{
+        color:#555555;
+    }
+    .cardLatLong{
+        color:#888888;
+    }
+    .cardIcon{
+        background:#FFFFFF;
+    }
+}

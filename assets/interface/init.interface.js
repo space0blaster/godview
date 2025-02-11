@@ -624,3 +624,7 @@ class I {
     };
     //
 }
+
+window.onpopstate=(e)=>{
+    if(e && e.state) location.reload();
+};

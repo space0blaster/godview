@@ -127,7 +127,7 @@ const server=http.createServer((req, serverResponse)=>{
         });
     }
     else if(req.url.split(".")[2]==="js") {
-        fs.readFile('public/src/'+req.url,(err, data)=> {
+        fs.readFile('public/'+req.url,(err, data)=> {
             if(err) {
                 serverResponse.writeHead(200,{'Content-Type':'application/json'});
                 serverResponse.write(JSON.stringify({error:'error retrieving script'}));
@@ -140,7 +140,7 @@ const server=http.createServer((req, serverResponse)=>{
         });
     }
     else if(req.url.split(".")[2]==="css") {
-        fs.readFile('public/src/'+req.url,(err, data)=> {
+        fs.readFile('public/'+req.url,(err, data)=> {
             if(err) {
                 serverResponse.writeHead(200,{'Content-Type':'application/json'});
                 serverResponse.write(JSON.stringify({error:'error retrieving stylesheet'}));
@@ -153,7 +153,7 @@ const server=http.createServer((req, serverResponse)=>{
         });
     }
     else if(req.url.split(".")[1]==="png") {
-        fs.readFile('public/src/'+req.url,(err, data)=> {
+        fs.readFile('public/'+req.url,(err, data)=> {
             if(err) {
                 serverResponse.writeHead(200,{'Content-Type':'application/json'});
                 serverResponse.write(JSON.stringify({error:'error retrieving image'}));
@@ -166,7 +166,7 @@ const server=http.createServer((req, serverResponse)=>{
         });
     }
     else if(req.url.split(".")[1]==="gif") {
-        fs.readFile('public/src/'+req.url,(err, data)=> {
+        fs.readFile('public/'+req.url,(err, data)=> {
             if(err) {
                 serverResponse.writeHead(200,{'Content-Type':'application/json'});
                 serverResponse.write(JSON.stringify({error:'error retrieving image'}));
